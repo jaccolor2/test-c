@@ -12,7 +12,7 @@ jobs:
     - name: Trigger Repository Dispatch in Docs Repository
       run: |
         curl -X POST \
-          -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+          -H "Authorization: token ${{ secrets.PERSONAL_ACCESS_TOKEN }}" \
           -H "Accept: application/vnd.github.v3+json" \
           https://api.github.com/repos/jaccolor2/test-d/dispatches \
           -d '{"event_type":"update-submodule-request"}'
